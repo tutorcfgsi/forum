@@ -11,6 +11,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Forum::class, 100)->create();
+        factory(\App\User::class)->create(['email' => 'raulreyes@gmail.com']);
+        factory(\App\User::class, 50)->create();
+        factory(\App\Forum::class, 20)->create();
+        factory(\App\Post::class, 100)->create();
     }
 }

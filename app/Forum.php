@@ -10,4 +10,8 @@ class Forum extends Model
 
     protected $fillable=['id','name','description'];
 
+    public function posts(){
+    	return $this->hasMany(Post::class);
+    }
+
 }

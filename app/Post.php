@@ -18,4 +18,8 @@ class Post extends Model
     	return $this->belongsTo(User::class, 'user_id');
     }
 
+    public function replies(){
+        return $this->hasMany(Reply::class);
+    }
+
 }

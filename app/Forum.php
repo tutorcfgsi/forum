@@ -14,4 +14,8 @@ class Forum extends Model
     	return $this->hasMany(Post::class);
     }
 
+    public function replies(){
+    	return $this->hasManyThrough(Reply::class, Post::class);
+    }
+
 }

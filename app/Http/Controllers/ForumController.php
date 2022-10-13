@@ -16,7 +16,6 @@ class ForumController extends Controller
     public function show(Forum $forum)  // Con esto estamos inyectando el Foro completo
 	{
 		$posts = $forum->posts()->with(['owner'])->paginate(2);
-
         return view('forums.detail', compact('forum','posts'));
 	}
 
